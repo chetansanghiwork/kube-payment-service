@@ -1,0 +1,7 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: kube-payment-service 
+spec:
+  containers:
+    - image: chetangsanghi/kube-payment-service:0.1

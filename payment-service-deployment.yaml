@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-payment
+spec:
+  selector:
+    matchLabels:
+      run: my-payment
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: my-payment
+    spec:
+      containers:
+      - name: paymentservice
+        image: chetangsanghi/kube-payment-service:0.1
+        ports:
+        - containerPort: 8081
