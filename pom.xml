@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.cgs.kubernetes.payment</groupId>
 	<artifactId>PaymentService</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>PaymentService</name>
 	<description>Payment Service</description>
 
