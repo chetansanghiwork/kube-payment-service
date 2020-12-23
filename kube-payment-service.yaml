@@ -1,7 +1,12 @@
-kind: Service
+kind: Service                             # Defines to create Service type Object
 apiVersion: v1
 metadata:
-  name: kube-payment-service 
+  name: paymentservice
 spec:
-  containers:
-    - image: chetangsanghi/kube-payment-service:0.1
+  ports:
+    - port: 8081                               # Containers port exposed
+      targetPort: 8081                     # Pods port
+  selector:
+    myvalue: payment-service                    
+  type: ClusterIP
+
