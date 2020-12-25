@@ -6,9 +6,10 @@ spec:
   selector:
     matchLabels:
       run: my-payment
-  replicas: 1
+  replicas: 2
   template:
     metadata:
+      name: my-payment-pod
       labels:
         run: my-payment
     spec:
@@ -17,3 +18,8 @@ spec:
         image: chetangsanghi/kube-payment-service:0.1
         ports:
         - containerPort: 8081
+        resources:
+          limits: 
+            cpu: 500m
+          requests:
+            cpu: 200m

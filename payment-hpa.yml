@@ -1,0 +1,12 @@
+kind: HorizontalPodAutoscaler            
+apiVersion: autoscaling/v1
+metadata:
+  name: my-payment-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: my-payment-deployment
+  minReplicas: 1
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 50

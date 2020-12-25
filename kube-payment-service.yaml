@@ -7,6 +7,6 @@ spec:
     - port: 8081                               # Containers port exposed
       targetPort: 8081                     # Pods port
   selector:
-    myvalue: payment-service                    
+    run: my-payment                    
   type: ClusterIP
 
